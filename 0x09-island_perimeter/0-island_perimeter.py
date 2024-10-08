@@ -5,7 +5,7 @@ contain a function island_perimeter
 """
 
 
-def island_perimeter(grid: List[List]) -> int:
+def island_perimeter(grid) -> int:
     """
     compute the island perimiter of a list of list represented
     as grid where 1 represent a land and 0 represent water

@@ -3,7 +3,6 @@
 """
 contain a function island_perimeter
 """
-from typing import List
 
 
 def island_perimeter(grid: List[List]) -> int:

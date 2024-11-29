@@ -10,6 +10,8 @@ def makeChange(coins, total):
     Compute the minimum number of coins required to make up a given
     total amount, given a list of coins denominations
     """
+    if total <= 0:
+        return 0
 
     dp = [float("inf")] * (total + 1)
 

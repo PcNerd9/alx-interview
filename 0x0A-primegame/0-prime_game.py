@@ -32,16 +32,20 @@ def isWinner(x, nums):
             "Maria": 0,
             "Ben": 0
             }
-    for number in nums:
-        if number == 0 or number == 1:
-            players["Ben"] += 1
 
-        number_prime = number_of_prime(number)
+    if x > len(nums):
+        x = len(nums)
+
+    for i in range(x):
+        if nums[i] == 0 or nums[i] == 1:
+            players["Ben"] += 1
+            continue
+
+        number_prime = number_of_prime(nums[i])
         if number_prime % 2 == 1:
             players["Maria"] += 1
         else:
             players["Ben"] += 1
-
     if players["Ben"] == players["Maria"]:
         return None
     elif players["Ben"] > players["Maria"]:
